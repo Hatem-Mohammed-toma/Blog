@@ -1,37 +1,64 @@
-# BlogDB
 
-BlogDB is a simple blog application that allows users to register, log in, and manage blog posts. The application is built using PHP and MySQL.
+# 📝 Blog System – PHP & MySQL
 
-## Features
+A simple and effective **content management system (CMS)** for creating and managing blog posts with user interaction features.
 
-- User registration and login
-- User roles (admin and user)
-- Create, edit, view, and delete blog posts
-- Authentication and authorization
+🔗 **Live Repo:** [Blog System on GitHub](https://github.com/Hatem-Mohammed-toma/Blog)
 
-## Database Schema
+---
 
-The application uses a MySQL database with the following schema:
+## 🚀 Features
 
-```sql
-CREATE DATABASE BlogDB COLLATE utf8mb4_unicode_ci;
+- **Post Management**
+  - Create, read, update, and delete blog posts
+  - Categorize posts for better organization
 
-USE BlogDB;
+- **Commenting System**
+  - Allow users to comment on posts
+  - Moderate comments before publishing
 
-CREATE TABLE users (
-    id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    `password` VARCHAR(64) NOT NULL,
-    role ENUM('admin', 'user') NOT NULL DEFAULT 'user',
-    created_at DATETIME NOT NULL DEFAULT NOW(),
-    PRIMARY KEY(id)
-);
+- **SEO Optimization**
+  - URL-friendly routing for better search engine indexing
 
-CREATE TABLE posts(
-    `id` int unsigned  auto_increment PRIMARY KEY,
-    `title` varchar(255) not null,
-    `content` text not null,
-    `created_at` datetime default now()
-);
+- **Authentication**
+  - Basic user login and registration
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer        | Tools Used                        |
+|--------------|-----------------------------------|
+| Backend      | PHP (Native), MySQL               |
+| Frontend     | HTML, CSS, JavaScript, Bootstrap  |
+| Features     | Sessions, MVC Structure, CKEditor, SEO-friendly URLs |
+
+---
+
+## 📁 Project Structure
+
 ```
+/Blog-System
+├── config/            # Database connection file
+├── controller/        # Application logic
+├── model/             # Database operations
+├── view/              # User interface templates
+├── lang/              # Language files (optional)
+├── lang.php           # Translation helper (optional)
+├── public/            # CSS, JS, images
+├── index.php          # Landing page
+└── README.md          # Project description
+```
+
+---
+
+## 🌐 Localization (English & Arabic)
+
+This project supports **multi-language localization** (English & Arabic) using PHP arrays and session-based switching for UI elements.
+
+---
+
+## 📌 Developer
+
+- **Name:** Hatem Mohammed Toma  
+- **GitHub:** [@Hatem-Mohammed-toma](https://github.com/Hatem-Mohammed-toma)
